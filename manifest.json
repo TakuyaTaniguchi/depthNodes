@@ -1,0 +1,6 @@
+{
+  "manifest_version": 2,
+  "name": "depthNodes",
+  "version": "1.0",
+  "description": "Different depth of nodes will use different colour allowing you to see the size of each element on the page"
+}
