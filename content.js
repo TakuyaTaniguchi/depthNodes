@@ -1,12 +1,20 @@
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
-      if( request.message === "active" ) {
-        active();
+        if( request.message === "active" ) {
+            active();
+        }else if(request.message === 'inactive'){
+            inactive();
         }
     }
   );
 
+
 function active(){
+
+    chrome.runtime.sendMessage(
+        { value: { contents: "test value from contents" } }
+    );
+
     const head = document.getElementsByTagName('head').item(0);
     const style = document.createElement('style');
     const text = `
@@ -23,7 +31,13 @@ function active(){
     const rule = document.createTextNode(text);
     style.media = 'screen';
     style.type = 'text/css';
+    style.id = 'depthNodes';
     style.appendChild(rule);
     head.appendChild(style);
+}
+
+function inactive(){
+    const target = document.querySelector('#depthNodes');
+    target.parentNode.removeChild(target)
 }
 
