@@ -1,12 +1,14 @@
-body {
-    width: 200px;
-  }
-  #result {
-    margin-top: 10px;
-  }
+body{
+    background-color: whitesmoke;
+}
+.changeButton{
+    font-size: 16px;
+    width: 100px;
+}
 
 .colorList{
     list-style: none;
+    padding-left: 5px;
 }
 
 .colorList_item:not(:first-of-type){
@@ -16,32 +18,42 @@ body {
 .colorList_item:before {
     content: "■";
     margin-right: 1em;
+    font-size: 20px;
 }
 
 .colorList_item:nth-of-type(1)::before{
     color: rgba(255,0,0,.2);
+    background-color:rgba(255,0,0,.2);
 }
 .colorList_item:nth-of-type(2)::before{
     color: rgba(0,255,0,.2);
+    background-color:rgba(0,255,0,.2);
 }
 .colorList_item:nth-of-type(3)::before{
     color: rgba(0,0,255,.2);
+    background-color:rgba(0,0,255,.2);
 }
 .colorList_item:nth-of-type(4)::before{
     color: rgba(255,0,255,.2);
+    background-color:rgba(255,0,255,.2);
 }
 .colorList_item:nth-of-type(5)::before{
     color: rgba(0,255,255,.2);
+    background-color:rgba(0,255,255,.2);
 }
 .colorList_item:nth-of-type(6)::before{
     color: rgba(255,255,0,.2);
+    background-color:rgba(255,255,0,.2);
 }
 .colorList_item:nth-of-type(7)::before{
     color: rgba(255,0,0,.2);
+    background-color:rgba(255,0,0,.2);
 }
 .colorList_item:nth-of-type(8)::before{
     color: rgba(0,255,0,.2);
+    background-color:rgba(0,255,0,.2);
 }
 .colorList_item:nth-of-type(9)::before{
     color: rgba(0,0,255,.2);
+    background-color:rgba(0,0,255,.2);
 }
